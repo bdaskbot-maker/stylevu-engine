@@ -1,0 +1,114 @@
+{
+  "brandId": "demo",
+  "brandName": "StyleVu Demo",
+  "brandNameBn": "স্টাইলভিউ ডেমো",
+  "logo": "/logo.png",
+  "tagline": "Try Before You Buy with AI",
+  "taglineBn": "AI দিয়ে কেনার আগে পরে দেখুন",
+  "colors": {
+    "primary": "#059669",
+    "secondary": "#064e3b",
+    "background": "#ffffff",
+    "text": "#1f2937",
+    "accent": "#d97706"
+  },
+  "language": "bn",
+  "contactWhatsApp": "+8801700000000",
+  "buyLinkType": "whatsapp",
+  "categories": [
+    { "id": "all", "name": "All", "nameBn": "সব", "icon": "👗" },
+    { "id": "panjabi", "name": "Panjabi", "nameBn": "পাঞ্জাবি", "icon": "🧥" },
+    { "id": "saree", "name": "Saree", "nameBn": "শাড়ি", "icon": "👘" },
+    { "id": "salwar-kameez", "name": "Salwar Kameez", "nameBn": "সালোয়ার কামিজ", "icon": "👚" },
+    { "id": "shirt", "name": "Shirt", "nameBn": "শার্ট", "icon": "👔" },
+    { "id": "eid-collection", "name": "Eid Collection", "nameBn": "ঈদ কালেকশন", "icon": "🌙" }
+  ],
+  "products": [
+    {
+      "id": "panjabi-01",
+      "name": "Royal Blue Panjabi",
+      "nameBn": "রয়্যাল ব্লু পাঞ্জাবি",
+      "category": "panjabi",
+      "price": 2500,
+      "currency": "৳",
+      "imageUrl": "https://images.stylevu.com/demo/products/panjabi-01.png",
+      "buyLink": "",
+      "isActive": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "panjabi-02",
+      "name": "White Embroidered Panjabi",
+      "nameBn": "সাদা এমব্রয়ডারি পাঞ্জাবি",
+      "category": "panjabi",
+      "price": 3200,
+      "currency": "৳",
+      "imageUrl": "https://images.stylevu.com/demo/products/panjabi-02.png",
+      "buyLink": "",
+      "isActive": true,
+      "sortOrder": 2
+    },
+    {
+      "id": "saree-01",
+      "name": "Red Jamdani Saree",
+      "nameBn": "লাল জামদানি শাড়ি",
+      "category": "saree",
+      "price": 8500,
+      "currency": "৳",
+      "imageUrl": "https://images.stylevu.com/demo/products/saree-01.png",
+      "buyLink": "",
+      "isActive": true,
+      "sortOrder": 3
+    },
+    {
+      "id": "salwar-01",
+      "name": "Cotton Salwar Kameez",
+      "nameBn": "কটন সালোয়ার কামিজ",
+      "category": "salwar-kameez",
+      "price": 1800,
+      "currency": "৳",
+      "imageUrl": "https://images.stylevu.com/demo/products/salwar-01.png",
+      "buyLink": "",
+      "isActive": true,
+      "sortOrder": 4
+    },
+    {
+      "id": "shirt-01",
+      "name": "Formal White Shirt",
+      "nameBn": "ফর্মাল সাদা শার্ট",
+      "category": "shirt",
+      "price": 1200,
+      "currency": "৳",
+      "imageUrl": "https://images.stylevu.com/demo/products/shirt-01.png",
+      "buyLink": "",
+      "isActive": true,
+      "sortOrder": 5
+    },
+    {
+      "id": "eid-01",
+      "name": "Eid Special Panjabi Set",
+      "nameBn": "ঈদ স্পেশাল পাঞ্জাবি সেট",
+      "category": "eid-collection",
+      "price": 4500,
+      "currency": "৳",
+      "imageUrl": "https://images.stylevu.com/demo/products/eid-01.png",
+      "buyLink": "",
+      "isActive": true,
+      "sortOrder": 6
+    }
+  ],
+  "socialShare": {
+    "facebook": true,
+    "whatsapp": true,
+    "instagram": true,
+    "download": true
+  },
+  "watermark": {
+    "enabled": true,
+    "position": "bottom-right",
+    "opacity": 0.3
+  },
+  "plan": "growth",
+  "poweredByBadge": true,
+  "maxTryOns": 1500
+}

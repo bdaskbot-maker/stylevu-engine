@@ -1,0 +1,26 @@
+name = "stylevu-proxy"
+main = "worker.js"
+compatibility_date = "2024-12-01"
+
+# Custom domain (set up in Cloudflare Dashboard)
+# routes = [{ pattern = "gemini-proxy.stylevu.com/*", zone_name = "stylevu.com" }]
+
+# KV Namespaces - replace IDs after running:
+# wrangler kv namespace create "BRAND_USAGE"
+# wrangler kv namespace create "BRAND_CONFIG"
+[[kv_namespaces]]
+binding = "BRAND_USAGE"
+id = "YOUR_BRAND_USAGE_KV_ID"
+preview_id = "YOUR_BRAND_USAGE_PREVIEW_KV_ID"
+
+[[kv_namespaces]]
+binding = "BRAND_CONFIG"
+id = "YOUR_BRAND_CONFIG_KV_ID"
+preview_id = "YOUR_BRAND_CONFIG_PREVIEW_KV_ID"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "production"
+
+# Secrets (set via wrangler secret put GEMINI_API_KEY)
+# GEMINI_API_KEY = "set via CLI"

@@ -1,0 +1,81 @@
+{
+  "brandId": "aarong",
+  "brandName": "Aarong",
+  "brandNameBn": "আড়ং",
+  "logo": "https://images.stylevu.com/aarong/logo.png",
+  "tagline": "Discover Your Eid Look with AI",
+  "taglineBn": "AI দিয়ে আপনার ঈদের লুক খুঁজুন",
+  "colors": {
+    "primary": "#8B4513",
+    "secondary": "#5C2D0E",
+    "background": "#FFFAF5",
+    "text": "#1a1a1a",
+    "accent": "#D2691E"
+  },
+  "language": "bn",
+  "contactWhatsApp": "+8801712345678",
+  "contactEmail": "order@aarong.com",
+  "buyLinkType": "website",
+  "products": [
+    {
+      "id": "eid-panjabi-01",
+      "name": "ঈদ স্পেশাল পাঞ্জাবি - নীল",
+      "category": "panjabi",
+      "price": "৳3,200",
+      "imageUrl": "https://images.stylevu.com/aarong/products/panjabi-blue-01.png",
+      "buyLink": "https://aarong.com/eid-panjabi-blue",
+      "isActive": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "eid-panjabi-02",
+      "name": "ঈদ স্পেশাল পাঞ্জাবি - সাদা",
+      "category": "panjabi",
+      "price": "৳2,800",
+      "imageUrl": "https://images.stylevu.com/aarong/products/panjabi-white-01.png",
+      "buyLink": "https://aarong.com/eid-panjabi-white",
+      "isActive": true,
+      "sortOrder": 2
+    },
+    {
+      "id": "eid-kurta-01",
+      "name": "এমব্রয়ডারি কুর্তা",
+      "category": "kurta",
+      "price": "৳4,500",
+      "imageUrl": "https://images.stylevu.com/aarong/products/kurta-embroidery-01.png",
+      "buyLink": "https://aarong.com/kurta-embroidery",
+      "isActive": true,
+      "sortOrder": 3
+    },
+    {
+      "id": "eid-saree-01",
+      "name": "জামদানি শাড়ি",
+      "category": "saree",
+      "price": "৳8,500",
+      "imageUrl": "https://images.stylevu.com/aarong/products/jamdani-saree-01.png",
+      "buyLink": "https://aarong.com/jamdani-saree",
+      "isActive": true,
+      "sortOrder": 4
+    },
+    {
+      "id": "eid-salwar-01",
+      "name": "ঈদ সালোয়ার কামিজ",
+      "category": "salwar_kameez",
+      "price": "৳3,800",
+      "imageUrl": "https://images.stylevu.com/aarong/products/salwar-kameez-01.png",
+      "buyLink": "https://aarong.com/salwar-kameez",
+      "isActive": true,
+      "sortOrder": 5
+    }
+  ],
+  "categories": ["all", "panjabi", "kurta", "saree", "salwar_kameez"],
+  "watermark": true,
+  "watermarkLogo": "https://images.stylevu.com/aarong/logo-watermark.png",
+  "socialShare": {
+    "facebook": true,
+    "whatsapp": true,
+    "instagram": true
+  },
+  "poweredByStylevu": true,
+  "proxyEndpoint": "https://gemini-proxy.stylevu.com"
+}
