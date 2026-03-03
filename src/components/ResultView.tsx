@@ -38,7 +38,7 @@ export default function ResultView({ resultImage, product, onTryAnother, onBack 
       <div className="sv-result-actions">
         <BuyButton product={product} className="sv-result-buy" />
 
-        {config.socialShare.enabled && (
+        {(config.socialShare.facebook || config.socialShare.whatsapp || config.socialShare.instagram || config.socialShare.download) && (
           <button
             className="sv-btn sv-btn-outline"
             onClick={() => setShowShare(true)}
@@ -65,8 +65,14 @@ export default function ResultView({ resultImage, product, onTryAnother, onBack 
 
       {showShare && (
         <SharePanel
-          resultImage={resultImage}
-          productName={product.name}
+          result={{
+            id: product.id,
+            imageUrl: resultImage.startsWith('data:') ? resultImage : `data:image/jpeg;base64,${resultImage}`,
+            productId: product.id,
+            productName: product.name,
+            timestamp: Date.now(),
+            brandId: config.brandId,
+          }}
           onClose={() => setShowShare(false)}
         />
       )}

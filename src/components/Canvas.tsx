@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { RotateCcwIcon, ChevronLeftIcon, ChevronRightIcon } from './icons';
 import Spinner from './Spinner';
 import { AnimatePresence, motion } from 'framer-motion';
-import { brandConfig } from '../brandConfig';
 import { t } from '../i18n';
 
 interface CanvasProps {

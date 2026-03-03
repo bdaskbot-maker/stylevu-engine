@@ -1,6 +1,6 @@
 import React from 'react';
 import { OutfitLayer } from '../types';
-import { brandConfig } from '../brandConfig';
+import { getBrandConfig } from '../brandConfig';
 import { t } from '../i18n';
 
 interface OutfitStackProps {
@@ -9,6 +9,7 @@ interface OutfitStackProps {
 }
 
 const OutfitStack: React.FC<OutfitStackProps> = ({ outfitHistory, onRemoveLastGarment }) => {
+  const brandConfig = getBrandConfig();
   if (outfitHistory.length <= 1) return null;
 
   return (

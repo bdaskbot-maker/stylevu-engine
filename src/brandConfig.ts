@@ -132,3 +132,60 @@ export function getProxyUrl(): string {
 export function getImageBaseUrl(): string {
   return import.meta.env.VITE_IMAGE_BASE_URL || 'https://images.stylevu.com';
 }
+
+// Cached brand config for synchronous access (must call loadBrandConfig first)
+let cachedBrandConfig: BrandConfig | null = null;
+
+/**
+ * Get the cached brand config (synchronous)
+ * Must call loadBrandConfig() first during app initialization
+ */
+export function getBrandConfig(): BrandConfig {
+  if (!cachedBrandConfig) {
+    // Return default config if not loaded yet
+    return {
+      brandId: 'demo',
+      brandName: 'StyleVu Demo',
+      brandNameBn: undefined,
+      logo: '/logo.png',
+      tagline: 'Try Before You Buy with AI',
+      taglineBn: 'AI দিয়ে কেনার আগে পরে দেখুন',
+      colors: DEFAULT_COLORS,
+      language: 'bn',
+      contactWhatsApp: '',
+      buyLinkType: 'website',
+      products: [],
+      categories: DEFAULT_CATEGORIES,
+      socialShare: {
+        facebook: true,
+        whatsapp: true,
+        instagram: true,
+        download: true,
+      },
+      watermark: {
+        enabled: true,
+        position: 'bottom-right',
+        opacity: 0.3,
+      },
+      plan: 'starter',
+      poweredByBadge: true,
+      maxTryOns: 300,
+    };
+  }
+  return cachedBrandConfig;
+}
+
+/**
+ * Set the cached brand config (called after loadBrandConfig resolves)
+ */
+export function setBrandConfig(config: BrandConfig): void {
+  cachedBrandConfig = config;
+}
+
+// Export the brandConfig as a getter for legacy usage
+export const brandConfig = new Proxy({} as BrandConfig, {
+  get: (_target, prop) => {
+    const config = getBrandConfig();
+    return config[prop as keyof BrandConfig];
+  },
+});

@@ -5,7 +5,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { BrandConfig, Language } from './types';
-import { loadBrandConfig, applyBrandTheme } from './brandConfig';
+import { loadBrandConfig, applyBrandTheme, setBrandConfig } from './brandConfig';
 import { setLanguage } from './i18n';
 
 interface BrandContextType {
@@ -34,6 +34,7 @@ export function BrandProvider({ children }: { children: ReactNode }) {
     loadBrandConfig()
       .then((cfg) => {
         setConfig(cfg);
+        setBrandConfig(cfg); // Cache for synchronous access
         setLang(cfg.language);
         setLanguage(cfg.language);
         applyBrandTheme(cfg);

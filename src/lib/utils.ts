@@ -2,7 +2,7 @@
  * StyleVu — Utility Functions
  */
 
-import { brandConfig } from '../brandConfig';
+import { getBrandConfig } from '../brandConfig';
 
 // ─── Error Handling ───────────────────────────────────────────
 
@@ -56,6 +56,7 @@ export const urlToFile = (url: string, filename: string): Promise<File> => {
  * Add brand watermark to an image data URL
  */
 export const addWatermark = async (imageDataUrl: string): Promise<string> => {
+  const brandConfig = getBrandConfig();
   if (!brandConfig.watermark) return imageDataUrl;
 
   return new Promise((resolve) => {
@@ -82,7 +83,7 @@ export const addWatermark = async (imageDataUrl: string): Promise<string> => {
       ctx.textAlign = 'right';
       ctx.textBaseline = 'bottom';
 
-      const text = brandConfig.poweredByStylevu
+      const text = brandConfig.poweredByBadge
         ? `${brandConfig.brandName} • StyleVu`
         : brandConfig.brandName;
 
@@ -99,6 +100,7 @@ export const addWatermark = async (imageDataUrl: string): Promise<string> => {
  * Download an image with watermark
  */
 export const downloadImage = async (imageDataUrl: string, filename?: string): Promise<void> => {
+  const brandConfig = getBrandConfig();
   const watermarked = await addWatermark(imageDataUrl);
   const link = document.createElement('a');
   link.download = filename || `${brandConfig.brandId}-tryon-${Date.now()}.png`;
@@ -120,6 +122,7 @@ export const shareToFacebook = (url?: string): void => {
 };
 
 export const shareToWhatsApp = (text?: string): void => {
+  const brandConfig = getBrandConfig();
   const message = text || `Check out my virtual try-on look from ${brandConfig.brandName}! ${window.location.href}`;
   window.open(
     `https://wa.me/?text=${encodeURIComponent(message)}`,
@@ -131,6 +134,7 @@ export const orderViaWhatsApp = (
   productName: string,
   productPrice: string
 ): void => {
+  const brandConfig = getBrandConfig();
   if (!brandConfig.contactWhatsApp) return;
   const phone = brandConfig.contactWhatsApp.replace(/[^0-9]/g, '');
   const message = `Hi! I'd like to order: ${productName} (${productPrice}). I tried it on using your virtual try-on app!`;

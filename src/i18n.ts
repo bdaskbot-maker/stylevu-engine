@@ -27,9 +27,11 @@ const translations = {
     'camera.capture': 'Capture',
     'camera.retake': 'Retake',
     'camera.use': 'Use This Photo',
+    'camera.usePhoto': 'Use This Photo',
     'camera.switch': 'Switch Camera',
     'camera.uploading': 'Uploading...',
     'camera.tips': 'Tips: Good lighting, plain background, full body visible',
+    'camera.permissionDenied': 'Camera permission denied. Please allow camera access.',
 
     // Wardrobe
     'wardrobe.title': 'Choose Your Outfit',
@@ -66,6 +68,19 @@ const translations = {
     'buy.visitStore': 'Visit Store',
     'buy.orderFacebook': 'Order via Facebook',
 
+    // Canvas
+    'canvas.startOver': 'Start Over',
+    'canvas.loading': 'Loading...',
+
+    // Outfit
+    'outfit.title': 'Your Outfit',
+    'outfit.base': 'Base Photo',
+    'outfit.remove': 'Remove Last',
+
+    // Result
+    'result.share': 'Share',
+    'result.tryAnother': 'Try Another',
+
     // General
     'general.back': 'Back',
     'general.close': 'Close',
@@ -95,9 +110,11 @@ const translations = {
     'camera.capture': 'ছবি তুলুন',
     'camera.retake': 'আবার তুলুন',
     'camera.use': 'এই ছবি ব্যবহার করুন',
+    'camera.usePhoto': 'এই ছবি ব্যবহার করুন',
     'camera.switch': 'ক্যামেরা পরিবর্তন',
     'camera.uploading': 'আপলোড হচ্ছে...',
     'camera.tips': 'টিপস: ভালো আলো, সাদা ব্যাকগ্রাউন্ড, পুরো শরীর দেখা যাক',
+    'camera.permissionDenied': 'ক্যামেরার অনুমতি নেই। অনুগ্রহ করে ক্যামেরার অ্যাক্সেস দিন।',
 
     // Wardrobe
     'wardrobe.title': 'আপনার পোশাক বাছাই করুন',
@@ -133,6 +150,19 @@ const translations = {
     'buy.orderWhatsApp': 'হোয়াটসঅ্যাপে অর্ডার করুন',
     'buy.visitStore': 'দোকানে যান',
     'buy.orderFacebook': 'ফেসবুকে অর্ডার করুন',
+
+    // Canvas
+    'canvas.startOver': 'শুরু থেকে',
+    'canvas.loading': 'লোড হচ্ছে...',
+
+    // Outfit
+    'outfit.title': 'আপনার পোশাক',
+    'outfit.base': 'বেস ছবি',
+    'outfit.remove': 'শেষটি সরান',
+
+    // Result
+    'result.share': 'শেয়ার',
+    'result.tryAnother': 'আরেকটি পরুন',
 
     // General
     'general.back': 'পেছনে',

@@ -6,6 +6,19 @@
 export type Language = 'en' | 'bn';
 export type BuyLinkType = 'website' | 'whatsapp' | 'facebook' | 'messenger';
 export type PlanTier = 'starter' | 'growth' | 'premium';
+export type CameraFacing = 'user' | 'environment';
+
+export interface Garment {
+  id: string;
+  name: string;
+  url: string;
+  category?: string;
+}
+
+export interface OutfitLayer {
+  garment: Garment | null;
+  imageUrl?: string;
+}
 
 export interface BrandColors {
   primary: string;
