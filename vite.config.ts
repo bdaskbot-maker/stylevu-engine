@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: 'terser',
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks: undefined,
@@ -16,6 +16,9 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
+  },
+  preview: {
+    port: 3000,
   },
   envPrefix: 'VITE_',
   // Allow JSON imports for brand configs
