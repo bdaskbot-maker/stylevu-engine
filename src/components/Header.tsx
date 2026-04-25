@@ -14,14 +14,15 @@ export default function Header() {
     <header
       className="sv-header"
       style={{
-        background: `linear-gradient(135deg, ${config.colors.primary}, ${config.colors.secondary})`,
+        background: `linear-gradient(135deg, ${config.colors.primary} 0%, ${config.colors.secondary} 100%)`,
       }}
+      role="banner"
     >
       <div className="sv-header-inner">
         <div className="sv-header-brand">
           <img
             src={config.logo}
-            alt={config.brandName}
+            alt={`${config.brandName} logo`}
             className="sv-header-logo"
             onError={(e) => {
               (e.target as HTMLImageElement).style.display = 'none';
@@ -36,7 +37,12 @@ export default function Header() {
             </p>
           </div>
         </div>
-        <button className="sv-lang-toggle" onClick={toggleLanguage} title={t('general.changeLanguage')}>
+        <button 
+          className="sv-lang-toggle" 
+          onClick={toggleLanguage} 
+          title={t('general.changeLanguage')}
+          aria-label={t('general.changeLanguage')}
+        >
           {t('general.language')}
         </button>
       </div>
