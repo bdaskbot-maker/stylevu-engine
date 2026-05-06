@@ -11,12 +11,17 @@ export default function ProcessingOverlay() {
   if (!config) return null;
 
   return (
-    <div className="sv-processing-overlay">
+    <div 
+      className="sv-processing-overlay sv-fade-in" 
+      role="alert" 
+      aria-live="polite"
+      aria-busy="true"
+    >
       <div className="sv-processing-content">
         <div className="sv-spinner" style={{ borderTopColor: config.colors.primary }} />
         <h3>{t('tryOn.processing')}</h3>
         <p>{t('tryOn.pleaseWait')}</p>
-        <div className="sv-processing-dots">
+        <div className="sv-processing-dots" aria-hidden="true">
           <span style={{ backgroundColor: config.colors.primary }} />
           <span style={{ backgroundColor: config.colors.primary }} />
           <span style={{ backgroundColor: config.colors.primary }} />
